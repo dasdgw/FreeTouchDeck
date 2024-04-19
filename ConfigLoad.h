@@ -17,6 +17,14 @@ bool loadMainConfig()
   }
   File configfile = FILESYSTEM.open("/config/wificonfig.json");
 
+  /*
+  while(configfile.available()){
+    Serial.write(configfile.read());
+  }
+  Serial.println("");
+  configfile.close();
+  configfile = FILESYSTEM.open("/config/wificonfig.json");
+  */
   JsonDocument doc;
 
   DeserializationError error = deserializeJson(doc, configfile);

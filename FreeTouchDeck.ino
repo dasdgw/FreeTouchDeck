@@ -961,6 +961,7 @@ void loop(void)
   {
 
     String command = Serial.readStringUntil(' ');
+    Serial.println(command);
 
     if (command == "cal")
     {
@@ -1175,6 +1176,7 @@ GetTouch();
 
 GetTouch();
 
+if (pressed) Serial.printf("[INFO]: GetTouch x:%i y:%i\n", t_x, t_y);
     // Check if the X and Y coordinates of the touch are within one of our buttons
     for (uint8_t b = 0; b < 6; b++)
     {
