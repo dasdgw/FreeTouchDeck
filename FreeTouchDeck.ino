@@ -450,7 +450,7 @@ Menu menu6;
 unsigned long previousMillis = 0;
 unsigned long Interval = 0;
 bool displayinginfo;
-char* jsonfilefail = "";
+char const *jsonfilefail = "";
 
 // Invoke the TFT_eSPI button class and create all the button objects
 TFT_eSPI_Button key[6];
@@ -1302,7 +1302,7 @@ GetTouch();
         key[b].initButton(&tft, KEY_X + col * (KEY_W + KEY_SPACING_X),
                           KEY_Y + row * (KEY_H + KEY_SPACING_Y), // x, y, w, h, outline, fill, text
                           KEY_W, KEY_H, TFT_WHITE, buttonBG, TFT_WHITE,
-                          "", KEY_TEXTSIZE);
+                          (char *)"", KEY_TEXTSIZE);
         key[b].drawButton();
 
         // After drawing the button outline we call this to draw a logo.
@@ -1367,7 +1367,7 @@ GetTouch();
         key[b].initButton(&tft, KEY_X + col * (KEY_W + KEY_SPACING_X),
                           KEY_Y + row * (KEY_H + KEY_SPACING_Y), // x, y, w, h, outline, fill, text
                           KEY_W, KEY_H, TFT_WHITE, TFT_WHITE, TFT_WHITE,
-                          "", KEY_TEXTSIZE);
+                          (char *)"", KEY_TEXTSIZE);
         key[b].drawButton();
 
         //---------------------------------------- Button press handeling --------------------------------------------------

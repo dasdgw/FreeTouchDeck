@@ -1342,7 +1342,7 @@ void drawKeypad()
         key[b].initButton(&tft, KEY_X + col * (KEY_W + KEY_SPACING_X),
                           KEY_Y + row * (KEY_H + KEY_SPACING_Y), // x, y, w, h, outline, fill, text
                           KEY_W, KEY_H, TFT_WHITE, buttonBG, TFT_WHITE,
-                          "", KEY_TEXTSIZE);
+                          (char *)"", KEY_TEXTSIZE);
         key[b].drawButton();
         drawlogo(b, col, row, drawTransparent, false); // After drawing the button outline we call this to draw a logo.
       }
@@ -1399,7 +1399,7 @@ void drawKeypad()
           key[b].initButton(&tft, KEY_X + col * (KEY_W + KEY_SPACING_X),
                             KEY_Y + row * (KEY_H + KEY_SPACING_Y), // x, y, w, h, outline, fill, text
                             KEY_W, KEY_H, TFT_WHITE, buttonBG, TFT_WHITE,
-                            "", KEY_TEXTSIZE);
+                            (char *)"", KEY_TEXTSIZE);
           key[b].drawButton();
           drawlogo(b, col, row, drawTransparent, false);
         }
@@ -1460,7 +1460,7 @@ void drawKeypad()
           key[b].initButton(&tft, KEY_X + col * (KEY_W + KEY_SPACING_X),
                             KEY_Y + row * (KEY_H + KEY_SPACING_Y), // x, y, w, h, outline, fill, text
                             KEY_W, KEY_H, TFT_WHITE, buttonBG, TFT_WHITE,
-                            "", KEY_TEXTSIZE);
+                            (char *)"", KEY_TEXTSIZE);
           key[b].drawButton();
           // After drawing the button outline we call this to draw a logo.
           if (islatched[index] && b < 5)
