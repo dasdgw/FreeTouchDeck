@@ -156,6 +156,14 @@ unsigned int iLightTolerance = 20; //the required diffrence in brightness before
 
 //Set your resolution here (default is for the ESP32 Touchdown and esp323248s035c)
 //No need to change anything if you use a esp322432s028r
+/*
+defines don't work as expected in *.ino files.
+even setting the define at compile time and using
+
+#if !defined(SCREEN_WIDTH) || !defined(SCREEN_HEIGHT)
+
+does not work.
+We set the define through platform.ini and remove them here
 #ifdef DefaultRes
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT 320
@@ -165,6 +173,7 @@ unsigned int iLightTolerance = 20; //the required diffrence in brightness before
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 240
 #endif
+*/
 
 
 const char *versionnumber = "0.9.18a";
