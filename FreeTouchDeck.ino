@@ -72,7 +72,7 @@
 
 // ------- Extra things
 //Possible global (affects all devices) button spam fix (makes it a bit less)
-#define SpamFix
+//#define SpamFix
 
 // ------- Settings for the esp323248s035 capacitive board -------
 #ifdef esp323248s035c
@@ -471,7 +471,6 @@ TFT_eSPI_Button key[6];
 
 void GetTouch() {
   bool prevthing = pressed;
-  uint16_t t_x = 0, t_y = 0;
 #ifdef GT911
   ts.read();
   bool pressed = ts.isTouched;
@@ -504,7 +503,7 @@ void GetTouch() {
 #endif
 
 #ifdef esp322432s028r
-  bool pressed = touch.Pressed();//tft.getTouch( &touchX, &touchY, 600 );
+  pressed = touch.Pressed();//tft.getTouch( &touchX, &touchY, 600 );
   if (pressed)
   {
     t_x = touch.X();
