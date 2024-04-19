@@ -220,7 +220,7 @@ bool saveWifiSSID(String ssid)
   FILESYSTEM.remove("/config/wificonfig.json");
   File file = FILESYSTEM.open("/config/wificonfig.json", "w");
 
-  DynamicJsonDocument doc(384);
+  JsonDocument doc;
 
   JsonObject wificonfigobject = doc.to<JsonObject>();
 
@@ -257,7 +257,7 @@ bool saveWifiPW(String password)
   FILESYSTEM.remove("/config/wificonfig.json");
   File file = FILESYSTEM.open("/config/wificonfig.json", "w");
 
-  DynamicJsonDocument doc(384);
+  JsonDocument doc;
 
   JsonObject wificonfigobject = doc.to<JsonObject>();
 
@@ -300,7 +300,7 @@ bool saveWifiMode(String wifimode)
   FILESYSTEM.remove("/config/wificonfig.json");
   File file = FILESYSTEM.open("/config/wificonfig.json", "w");
 
-  DynamicJsonDocument doc(384);
+  JsonDocument doc;
 
   JsonObject wificonfigobject = doc.to<JsonObject>();
 
