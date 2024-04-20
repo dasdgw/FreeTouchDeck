@@ -473,7 +473,7 @@ void GetTouch() {
   bool prevthing = pressed;
 #ifdef GT911
   ts.read();
-  bool pressed = ts.isTouched;
+  pressed = ts.isTouched;
   if (pressed) {
 #ifndef GT911_Possible_Spam_Fix2
     for (int i = 0; i < ts.touches; i++) {
